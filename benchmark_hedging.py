@@ -1,6 +1,6 @@
 import numpy as np
 
-from blackscholes import bs_delta
+from black_scholes import bs_delta
 from hedging import HedgingEnv
 from numpy.typing import NDArray
 

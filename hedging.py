@@ -3,7 +3,7 @@ import torch
 
 from torch import Tensor
 from numpy.typing import NDArray
-from blackscholes import bs_call_price
+from black_scholes import bs_call_price
 from policy import PolicyNNet
 
 

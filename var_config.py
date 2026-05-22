@@ -5,7 +5,7 @@ r = 0.05  # Drift
 sigma = 0.2  # Volatility
 
 # For Monte Carlo simulations
-steps = 500
+steps = 100
 paths = 4000
 tests = 2000
 

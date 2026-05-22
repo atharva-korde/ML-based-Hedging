@@ -2,7 +2,7 @@ import torch
 import numpy as np
 
 from var_config import *
-from montecarlosimulator import simulate_paths_gbm
+from montecarlo_simulator import simulate_paths_gbm
 from hedging import HedgingEnv
 from benchmark_hedging import BSDeltaHedger
 from policy import PolicyNNet

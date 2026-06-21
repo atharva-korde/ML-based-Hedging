@@ -9,9 +9,11 @@ class PolicyNNet(nn.Module):
 
         super().__init__()
 
-        # Create a neural network
-        # Three input parameters: Stock price, Current hedge position, Time to maturity
-        # One output: New hedge position
+        """ Creates a neural network
+         Three input parameters: Stock price, Current hedge position, Time to maturity
+         One output: New hedge position """
+        # It is possible to tweak the hidden variable in sesrch of better results - can try this.
+
         self.net = nn.Sequential(
             nn.Linear(3, hidden),
             nn.LayerNorm(hidden),

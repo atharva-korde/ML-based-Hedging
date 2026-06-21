@@ -6,6 +6,9 @@ from numpy.typing import NDArray
 def simulate_paths_gbm(
     S0: float, r: float, sigma: float, T: int, steps: int, paths: int, seed: int = 42
 ) -> np.NDArray[np.float64]:
+    """ A monte-carlo simulator to generate stock price paths randomly.
+        paths = number of paths
+        steps = number of discrete time steps in each path """
 
     rng = np.random.default_rng(seed)
     dt = T / steps
@@ -20,4 +23,4 @@ def simulate_paths_gbm(
             (r - 0.5 * sigma**2) * dt + sigma * np.sqrt(dt) * z
         )
 
-    return S  # Array of size paths x (steps + 1), the rows are the paths
+    return S  # Array of size paths x (steps + 1), note that the rows are the paths

@@ -12,8 +12,8 @@ from evals import evaluate, plot_results
 
 def main():
     print("Simulating training paths...")
-    train_paths = simulate_paths_gbm(S0, r, sigma, T, steps, paths, seed=42)
-    test_paths  = simulate_paths_gbm(S0, r, sigma, T, steps, tests,  seed=73)
+    train_paths = simulate_paths_gbm(S0, r, sigma, T, steps, n_paths, seed=42)
+    test_paths  = simulate_paths_gbm(S0, r, sigma, T, steps, n_tests,  seed=61)
 
     print("Building environments...")
     train_env = HedgingEnv(train_paths, K, r, sigma, T, transaction_cost)

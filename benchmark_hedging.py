@@ -6,7 +6,8 @@ from numpy.typing import NDArray
 
 
 class BSDeltaHedger:
-    # A class enabling deterministic BS-Delta hedging
+    # A class enabling deterministic BS-Delta hedging. The initialization parameters are the same as that
+    # for the ML-hedging environment
 
     def __init__(self, env: HedgingEnv) -> None:
         self.env = env
@@ -19,7 +20,7 @@ class BSDeltaHedger:
 
         delta = np.zeros(env.paths)  # Initial hedge
 
-        # Use the same algorithm as in the ML-hedger here: it is deterministic
+        # We use the same algorithm as in the ML-hedger here: this is easy as it is deterministic
         for t in range(env.steps):
             tau_t = env.T - env.times[t]
             new_delta = bs_delta(

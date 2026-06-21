@@ -49,7 +49,7 @@ class HedgingEnv:
         self.tau = torch.tensor(T - self.times[:-1], dtype=torch.float32)
 
     def _normalise_inputs(self, S: Tensor, delta: Tensor, tau: Tensor) -> Tensor:
-        # Normalise inputs to mean=0, variance=1 and stack them
+        """ Normalises inputs to mean=0, variance=1 and stacks them """
         S_norm = S / self.S[:, 0]
         tau_norm = tau / self.T
         return torch.stack([S_norm, delta, tau_norm], dim=1)

@@ -6,8 +6,8 @@ sigma = 0.2  # Volatility
 
 # For Monte Carlo simulations
 steps = 100
-paths = 4000
-tests = 2000
+n_paths = 4000
+n_tests = 2000
 
 transaction_cost = 0.000
 
